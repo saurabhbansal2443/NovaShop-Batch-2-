@@ -16,7 +16,7 @@ const ProductGrid = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [currentPage]);
 
   function handlePageChange(page) {
     setCurrentPage(page);
