@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
   const {
+    id,
     title,
     category,
     price,
@@ -18,7 +20,7 @@ const ProductCard = ({ data }) => {
   );
 
   return (
-    <div className="product-card">
+    <Link className="link" to={`/product/${id}`} className="product-card">
       <div className="image-wrapper">
         <img src={thumbnail} alt={title} />
         <span className="discount-badge">
@@ -51,7 +53,7 @@ const ProductCard = ({ data }) => {
 
         <button className="add-btn">Add to Cart</button>
       </div>
-    </div>
+    </Link>
   );
 };
 

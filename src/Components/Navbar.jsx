@@ -1,10 +1,13 @@
 import React from "react";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Nova Shop</div>
+      <Link to="/" className="navbar-logo">
+        Nova Shop
+      </Link>
       <SearchBar />
 
       <div className="navbar-right">
